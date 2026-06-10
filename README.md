@@ -42,6 +42,18 @@ Por defecto escucha en:
 
 ## Prueba rapida
 
+### Uso con Postman
+
+Este repositorio incluye una coleccion lista para usar en [Challenges.postman_collection.json](Challenges.postman_collection.json).
+
+Pasos:
+
+1. Importa [Challenges.postman_collection.json](Challenges.postman_collection.json) en Postman.
+2. Inicia la API con `node src/server.js` desde [api](api).
+3. Ejecuta la request redact.
+4. Copia la key del response y reemplazala en el body de la request unredact.
+5. Ejecuta unredact y valida que regrese el texto original.
+
 ### Redactar
 
 Envía un `POST` a `http://localhost:3000/api/challenge/redact` con un JSON como este:
@@ -86,3 +98,4 @@ Respuesta esperada:
 
 1. La key que se genera es unicamente en memoria, se tendria que implementar otra solución para guardarla en otro lado de forma
 segura
+2. La request unredact de la coleccion trae una key de ejemplo; debes reemplazarla con la key real recibida en redact.
