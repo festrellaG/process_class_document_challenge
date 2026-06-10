@@ -1,0 +1,25 @@
+# Node
+**/node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+**/.env
+
+# Build artifacts
+**/dist/
+**/build/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Infra data
+Infraestructure/storage/minio-data/
+Infraestructure/storage/mongo-data/
+
+# Runtime caches
+**/.cache/
