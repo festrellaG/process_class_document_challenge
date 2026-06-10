@@ -1,0 +1,76 @@
+{
+  "info": {
+    "_postman_id": "de239b14-68c2-4b7a-a4f3-8b9bfc7d646e",
+    "name": "Challenges",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21466975"
+  },
+  "item": [
+    {
+      "name": "redact",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"censoredTerms\": \"\\\"Project Falcon\\\", confidential, 'internal use only'\",\r\n  \"documentText\": \"Project Falcon is confidential. This file is for internal use only.\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/challenge/redact",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "challenge",
+            "redact"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "unredact",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"key\": \"4736B6B0EA9EEF10\",\r\n  \"documentText\": \"XXXX is XXXX. This file is for XXXX.\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/challenge/unredact",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "challenge",
+            "unredact"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
